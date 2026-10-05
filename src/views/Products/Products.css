@@ -1,0 +1,253 @@
+.products-view-master-wrapper {
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.products-view-action-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.products-view-action-header-bar h2 {
+  color: #0f172a;
+  font-size: 1.85rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.products-view-action-header-bar p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.products-view-header-buttons-cluster {
+  display: flex;
+  gap: 14px;
+}
+
+.primary-action-add-item-btn {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.primary-action-add-item-btn:hover {
+  background-color: #2563eb;
+}
+
+.utility-btn-export-csv {
+  background-color: #ffffff;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.utility-btn-export-csv:hover {
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.products-error-alert-banner {
+  background-color: #fef2f2;
+  border: 1px solid #fca5a5;
+  color: #b91c1c;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* 🚀 TOGGLE BOX CONTROL PANEL BLOCKS STYLE METRICS */
+.products-dedicated-toggle-form-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 35px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.products-dedicated-toggle-form-box h4 {
+  color: #1e293b;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 10px;
+}
+
+.products-form-grid-element {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.form-input-field-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-input-field-tile label {
+  color: #475569;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.form-input-field-tile input,
+.form-input-field-tile select {
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  color: #0f172a;
+  outline: none;
+  background-color: #f8fafc;
+}
+
+.form-input-field-tile input:focus,
+.form-input-field-tile select:focus {
+  border-color: #3b82f6;
+  background-color: #ffffff;
+}
+
+.form-submit-buttons-strip {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.form-cancel-inner-btn {
+  background-color: transparent;
+  border: 1px solid #cbd5e1;
+  color: #64748b;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.form-save-inner-btn {
+  background-color: #10b981;
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.form-save-inner-btn:hover {
+  background-color: #059669;
+}
+
+/* 📊 DATA GRID DISPLAY TABLES SYSTEM MIXINS */
+.products-table-viewport-panel-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+  width: 100%;
+}
+
+.products-custom-data-grid-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.products-custom-data-grid-table th {
+  background-color: #f8fafc;
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.products-custom-data-grid-table td {
+  padding: 16px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+  vertical-align: middle;
+}
+
+.row-alert-danger-highlight {
+  background-color: rgba(239, 68, 68, 0.01);
+}
+
+.table-badge-category-group {
+  background-color: #f1f5f9;
+  color: #475569;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.table-status-indicator-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.table-status-indicator-badge.secure {
+  background-color: #ecfdf5;
+  color: #10b981;
+  border: 1px solid #a7f3d0;
+}
+.table-status-indicator-badge.danger {
+  background-color: #fff5f5;
+  color: #ef4444;
+  border: 1px solid #fed7d7;
+}
+
+.table-actions-inline-buttons-cluster {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.inline-action-edit-btn {
+  background-color: transparent;
+  border: 1px solid #3b82f6;
+  color: #3b82f6;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.inline-action-edit-btn:hover {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.inline-action-delete-btn {
+  background-color: transparent;
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.inline-action-delete-btn:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+}

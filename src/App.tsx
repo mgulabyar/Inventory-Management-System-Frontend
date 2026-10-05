@@ -1,20 +1,20 @@
-import { useState, useEffect } from 'react';
-import Login from './views/Login/Login';
-import Navbar from './components/Navbar/Navbar';
-import Dashboard from './views/Dashboard/Dashboard';
-import Products from './views/Products/Products';
-import PurchaseOrders from './views/PurchaseOrders/PurchaseOrders';
-import POS from './views/POS/POS'; // Injecting final cash terminal counter view layer
-import './App.css';
+import { useState, useEffect } from "react";
+import Login from "./views/Login/Login";
+import Navbar from "./components/Navbar/Navbar";
+import Dashboard from "./views/Dashboard/Dashboard";
+import Products from "./views/Products/Products";
+import PurchaseOrders from "./views/PurchaseOrders/PurchaseOrders";
+import POS from "./views/POS/POS"; // Injecting final cash terminal counter view layer
+import "./App.css";
 
 function App() {
   const [token, setToken] = useState<string | null>(null);
   const [user, setUser] = useState<any>(null);
-  const [activeTab, setActiveTab] = useState<string>('dashboard');
+  const [activeTab, setActiveTab] = useState<string>("dashboard");
 
   useEffect(() => {
-    const savedToken = localStorage.getItem('token');
-    const savedUser = localStorage.getItem('user');
+    const savedToken = localStorage.getItem("token");
+    const savedUser = localStorage.getItem("user");
 
     if (savedToken && savedUser) {
       setToken(savedToken);
@@ -25,12 +25,12 @@ function App() {
   const handleLoginSuccess = (newToken: string, newUser: any) => {
     setToken(newToken);
     setUser(newUser);
-    setActiveTab('dashboard'); 
+    setActiveTab("dashboard");
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
     setToken(null);
     setUser(null);
   };
@@ -38,13 +38,13 @@ function App() {
   // Central Router dynamic content router templates switches manager engine
   const renderActiveViewContent = () => {
     switch (activeTab) {
-      case 'dashboard':
+      case "dashboard":
         return <Dashboard />;
-      case 'products':
+      case "products":
         return <Products />;
-      case 'purchase':
+      case "purchase":
         return <PurchaseOrders />;
-      case 'pos':
+      case "pos":
         return <POS />; // Dynamically loading core checkout sales point of sale interfaces modules
       default:
         return <Dashboard />;
@@ -57,11 +57,11 @@ function App() {
         <Login onLoginSuccess={handleLoginSuccess} />
       ) : (
         <div className="app-authenticated-layout-root">
-          <Navbar 
-            user={user} 
-            activeTab={activeTab} 
-            setActiveTab={setActiveTab} 
-            onLogout={handleLogout} 
+          <Navbar
+            user={user}
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+            onLogout={handleLogout}
           />
           <main className="app-main-content-viewport-body">
             {renderActiveViewContent()}
@@ -73,4 +73,3 @@ function App() {
 }
 
 export default App;
-

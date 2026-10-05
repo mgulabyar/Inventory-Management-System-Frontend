@@ -1,0 +1,360 @@
+.pos-view-master-wrapper {
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.pos-view-action-header-bar {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 14px;
+}
+
+.pos-view-action-header-bar h2 {
+  color: #0f172a;
+  font-size: 1.85rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.pos-view-action-header-bar p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.pos-error-alert-banner {
+  background-color: #fef2f2;
+  border: 1px solid #fca5a5;
+  color: #b91c1c;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.pos-success-alert-banner {
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+}
+
+/* 🚀 MASTER TERMINAL LAYOUT SPLIT GRIDS STYLES MIXINS */
+.pos-terminal-layout-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: 30px;
+  align-items: start;
+}
+
+.pos-product-selection-matrix-panel, .pos-billing-invoice-ledger-panel {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.pos-product-selection-matrix-panel h4, .pos-billing-invoice-ledger-panel h4 {
+  color: #1e293b;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 10px;
+}
+
+/* LEFT TILES CATALOG GRID SYSTEM STYLES MODULES */
+.pos-catalog-cards-responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  max-height: 650px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.pos-product-tile-card {
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.pos-product-tile-card:hover {
+  background-color: #ffffff;
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+  transform: translateY(-1px);
+}
+
+.pos-tile-sku-badge code {
+  background-color: #e2e8f0;
+  color: #475569;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.pos-product-tile-card h5 {
+  color: #0f172a;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.pos-tile-pricing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pos-tile-sell-price {
+  color: #0f172a;
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.pos-tile-stock-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.pos-tile-stock-count.ok { background-color: #ecfdf5; color: #10b981; }
+.pos-tile-stock-count.warn { background-color: #fff5f5; color: #ef4444; }
+
+.out-of-stock-blur {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #edeecf !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* RIGHT BILLING INVOICER ENGINE STYLES MODULES */
+.pos-billing-master-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pos-form-header-inputs-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.pos-form-input-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pos-form-input-tile label {
+  color: #475569;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.pos-form-input-tile input, .pos-form-input-tile select {
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  color: #0f172a;
+  outline: none;
+  background-color: #f8fafc;
+}
+
+/* SCROLLER CART ROW STRIPS DESIGN HOOKS */
+.pos-cart-items-scroller-viewport {
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  min-height: 200px;
+  max-height: 280px;
+  overflow-y: auto;
+  background-color: #f8fafc;
+  padding: 10px;
+}
+
+.pos-empty-cart-state-notice {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-top: 80px;
+  font-weight: 500;
+}
+
+.pos-cart-rows-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pos-cart-item-row-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 10px 12px;
+  gap: 10px;
+}
+
+.pos-cart-item-identity-block {
+  flex: 1;
+}
+
+.pos-cart-item-identity-block h6 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.pos-cart-item-identity-block span {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.pos-cart-qty-counter-mechanics {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.pos-cart-qty-counter-mechanics button {
+  background-color: #f1f5f9;
+  border: none;
+  width: 28px;
+  height: 28px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.pos-cart-qty-counter-mechanics button:hover { background-color: #e2e8f0; }
+
+.pos-cart-qty-counter-mechanics input {
+  width: 32px;
+  border: none;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f172a;
+  outline: none;
+}
+
+.pos-cart-item-subtotal-price {
+  width: 75px;
+  text-align: right;
+  font-size: 0.85rem;
+  color: #0f172a;
+}
+
+.pos-cart-row-remove-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  padding: 4px;
+}
+
+.pos-cart-row-remove-btn:hover { color: #ef4444; }
+
+/* ACCOUNTING BALANCING BOX STYLES LAYOUTS */
+.pos-accounting-ledger-breakdown-box {
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pos-ledger-math-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #475569;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.pos-ledger-inputs-math-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 10px 0;
+}
+
+.inline-ledger-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.inline-ledger-input-group span {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.inline-ledger-input-group input {
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  outline: none;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.pos-ledger-math-row.dynamic-tax-row {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.net-grand-total-row-highlight {
+  border-top: 2px solid #cbd5e1;
+  padding-top: 12px;
+  margin-top: 4px;
+}
+
+.net-grand-total-row-highlight h5 { color: #0f172a; font-size: 0.95rem; font-weight: 700; }
+.net-grand-total-row-highlight h3 { color: #2563eb; font-size: 1.65rem; font-weight: 900; }
+
+.pos-master-checkout-submit-btn {
+  background-color: #10b981;
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.pos-master-checkout-submit-btn:hover { background-color: #059669; }
+.pos-master-checkout-submit-btn:disabled { background-color: #cbd5e1; color: #94a3b8; cursor: not-allowed; box-shadow: none; }

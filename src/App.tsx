@@ -3,7 +3,8 @@ import Login from './views/Login/Login';
 import Navbar from './components/Navbar/Navbar';
 import Dashboard from './views/Dashboard/Dashboard';
 import Products from './views/Products/Products';
-import PurchaseOrders from './views/PurchaseOrders/PurchaseOrders'; // Injecting active logistics layer
+import PurchaseOrders from './views/PurchaseOrders/PurchaseOrders';
+import POS from './views/POS/POS'; // Injecting final cash terminal counter view layer
 import './App.css';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
     setUser(null);
   };
 
+  // Central Router dynamic content router templates switches manager engine
   const renderActiveViewContent = () => {
     switch (activeTab) {
       case 'dashboard':
@@ -41,9 +43,9 @@ function App() {
       case 'products':
         return <Products />;
       case 'purchase':
-        return <PurchaseOrders />; // Dynamically loading procurement workspace interface records
+        return <PurchaseOrders />;
       case 'pos':
-        return <div style={{ padding: '40px' }}><h2>🛒 Counter Terminal Sales POS Workspace Canvas Placeholder</h2></div>;
+        return <POS />; // Dynamically loading core checkout sales point of sale interfaces modules
       default:
         return <Dashboard />;
     }
@@ -71,4 +73,4 @@ function App() {
 }
 
 export default App;
-// Synchronized core pipeline elements completely verified.
+

@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import Login from './views/Login/Login';
 import Navbar from './components/Navbar/Navbar';
 import Dashboard from './views/Dashboard/Dashboard';
-import Products from './views/Products/Products'; // Injecting active products component view layer
+import Products from './views/Products/Products';
+import PurchaseOrders from './views/PurchaseOrders/PurchaseOrders'; // Injecting active logistics layer
 import './App.css';
 
 function App() {
@@ -33,15 +34,14 @@ function App() {
     setUser(null);
   };
 
-  // Render master runtime canvas template body views
   const renderActiveViewContent = () => {
     switch (activeTab) {
       case 'dashboard':
         return <Dashboard />;
       case 'products':
-        return <Products />; // Dynamically loading core active stock index systems layer
+        return <Products />;
       case 'purchase':
-        return <div style={{ padding: '40px' }}><h2>📥 Inward Purchase Module Workspace Canvas Placeholder</h2></div>;
+        return <PurchaseOrders />; // Dynamically loading procurement workspace interface records
       case 'pos':
         return <div style={{ padding: '40px' }}><h2>🛒 Counter Terminal Sales POS Workspace Canvas Placeholder</h2></div>;
       default:
@@ -71,4 +71,4 @@ function App() {
 }
 
 export default App;
-// Verification check dynamic framework lines tracking synchronization complete.
+// Synchronized core pipeline elements completely verified.

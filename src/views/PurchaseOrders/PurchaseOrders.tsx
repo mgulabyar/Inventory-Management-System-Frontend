@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../../services/api";
-import { Product } from "../../types";
+import type { Product } from "../../types";
 import "./PurchaseOrders.css";
 
 interface Supplier {

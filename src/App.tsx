@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react';
 import Login from './views/Login/Login';
+import Navbar from './components/Navbar/Navbar';
+import Dashboard from './views/Dashboard/Dashboard';
 import './App.css';
 
 function App() {
   const [token, setToken] = useState<string | null>(null);
   const [user, setUser] = useState<any>(null);
+  const [activeTab, setActiveTab] = useState<string>('dashboard');
 
   useEffect(() => {
-    // Check local storage configuration state on bootstrap load
     const savedToken = localStorage.getItem('token');
     const savedUser = localStorage.getItem('user');
 
@@ -20,6 +22,7 @@ function App() {
   const handleLoginSuccess = (newToken: string, newUser: any) => {
     setToken(newToken);
     setUser(newUser);
+    setActiveTab('dashboard'); // Auto redirect to dashboard view context on success
   };
 
   const handleLogout = () => {
@@ -29,29 +32,37 @@ function App() {
     setUser(null);
   };
 
+  // Render view template block dynamically matching active buttons navigation mapping matrix
+  const renderActiveViewContent = () => {
+    switch (activeTab) {
+      case 'dashboard':
+        return <Dashboard />;
+      case 'products':
+        return <div style={{ padding: '40px' }}><h2>📦 Products Module Workspace Canvas Placeholder</h2></div>;
+      case 'purchase':
+        return <div style={{ padding: '40px' }}><h2>📥 Inward Purchase Module Workspace Canvas Placeholder</h2></div>;
+      case 'pos':
+        return <div style={{ padding: '40px' }}><h2>🛒 Counter Terminal Sales POS Workspace Canvas Placeholder</h2></div>;
+      default:
+        return <Dashboard />;
+    }
+  };
+
   return (
     <div className="app-master-runtime-wrapper">
       {!token ? (
         <Login onLoginSuccess={handleLoginSuccess} />
       ) : (
-        <div style={{ padding: '40px', textAlign: 'center', color: '#0f172a' }}>
-          <h1 style={{ marginBottom: '10px' }}>Welcome back, {user?.name}!</h1>
-          <p style={{ color: '#64748b', marginBottom: '20px' }}>
-            You are authenticated securely as a <strong>{user?.role}</strong>.
-          </p>
-          <button 
-            onClick={handleLogout}
-            style={{
-              padding: '10px 20px',
-              backgroundColor: '#ef4444',
-              color: '#fff',
-              border: 'none',
-              borderRadius: '6px',
-              fontWeight: 600
-            }}
-          >
-            Logout Securely
-          </button>
+        <div className="app-authenticated-layout-root">
+          <Navbar 
+            user={user} 
+            activeTab={activeTab} 
+            setActiveTab={setActiveTab} 
+            onLogout={handleLogout} 
+          />
+          <main className="app-main-content-viewport-body">
+            {renderActiveViewContent()}
+          </main>
         </div>
       )}
     </div>

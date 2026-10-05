@@ -1,0 +1,33 @@
+.dashboard-view-workspace-wrapper {
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dashboard-content-header-card h1 {
+  color: #0f172a;
+  font-size: 1.85rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.dashboard-content-header-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.dashboard-mock-grid-box {
+  margin-top: 30px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-mock-grid-box p {
+  color: #475569;
+  font-size: 1rem;
+}
